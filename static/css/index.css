@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* reset*/
+
+html,
+body{
+
+height: 100%;
+margin: 0;
+
+}
+
+* {
+font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    background-color:rgb(70, 51, 71);
+    }
+
+
+
+#imgcovid{
+    width: 45%;
+    margin-left: 23%;
+    
+    }
+
+#titulo{
+
+    text-align: center;
+    color: rgb(126, 128, 128);
+    margin-bottom: 10%;
+    }
+    
+    #formulario{
+
+        
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+       
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        }
+
+        #btn{
+            border-radius: 5%; 
+            margin-top: 10%;
+            margin-left: 35%;
+            opacity: 0.5;
+
+            
+            }
+        
+
+#tabela_mobile{
+font-size: xx-small;
+width: max-content;
+
+
+}
+
+
+
+@media only screen and (min-width: 480px){
+body{
+background-color:rgb(55, 42, 56);
+}
+
+#titulo{
+
+text-align: center;
+color: rgb(126, 128, 128);
+}
+
+#label{
+
+width: 100%;
+
+}
+
+#btn{
+border-radius: 5px; 
+
+margin-top: 5%; 
+margin-left: auto;
+margin-right: auto;
+opacity: 0.5;
+
+}
+
+
+
+#imgcovid{
+
+margin-left: 5%;
+width: 40%;
+  
+
+}
+
+#tabela{
+
+    box-shadow:0 0 5px rgba(90, 86, 86, 0.685) ;
+    border-radius: 15px;
+    width: 80%;
+    margin-top: 8%;
+    text-align: center;
+    font-size: small;
+    opacity: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#formulario{
+
+margin-top: 5%;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+box-shadow:0 0 5px rgba(90, 86, 86, 0.685) ;
+border-radius: 15px;
+padding-top: 5%;
+padding-bottom: 5%;
+padding-left: 5%;
+padding-right: 5%;
+}
+
+
+#tabela_mobile{
+    font-size:small;
+    width: 100%;
+    
+    
+    }
+
+
+}

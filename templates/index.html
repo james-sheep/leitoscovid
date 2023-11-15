@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Título da página exemplo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <script src="{{url_for('static',filename='js/index.js')}}"   ></script>
+    <script data-ad-client="ca-pub-7609529074113481" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+  
+<body>
+
+    
+  <img  id="imgcovid" src="{{ url_for('static', filename='logo.png')}}" alt="">
+
+
+  <div id="formulario">
+    <h3 style="color: rgb(126, 128, 128);" id="titulo">CORONAVÍRUS</h3>
+    <h6 id="titulo">CONSULTAR OCUPAÇÃO HOSPITALAR</h6>
+    <div >
+      <form action="/" method="POST">
+            <label style="color: rgb(126, 128, 128);"  id="label "><strong>Informe o Município:</label>
+              <input style="display:flexbox; border-radius: 15px;" class="form-control" type="text", id="cidade" name="cidade" placeholder="Município">
+      </form>
+              <button type="submit"  id="btn" class="btn btn-success">Consultar</button>
+    </div>
+  </div>
+  
+  
+  {% block content %}
+   
+    <div div class=".table-responsive " id="tabela">
+      <table id="tabela_mobile"class="table table-sm table-dark">
+      {% for item in context %}
+    <thead  >
+      
+      <tr>
+        <th scope="col">Estado</th>
+        <th scope="col">Unidade de Saúde</th>
+        <th scope="col">Oferta de Respiradores</th>
+        <th scope="col">Oferta de Leitos Clínicos</th>
+        <th scope="col">Ocupação de Leitos Clínicos</th>
+        <th scope="col">Oferta de UTI</th>
+        <th scope="col">Ocupação UTI</th>
+        <th scope="col">Data da Notificação</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>{{item.estadoSigla}}</td>
+        <td>{{item.nomeCnes}}</td>
+        <td> {{item.ofertaRespiradores}}</td>
+        <td> {{item.ofertaHospCli}}</td>
+        <td> {{item.ocupHospCli}}</td>
+        <td> {{item.ofertaHospUti}}</td>
+        <td> {{item.ocupHospUti}}</td>
+        <td> {{item.dataNotificacaoOcupacao}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  </div>
+  {% endblock %}
+
+  
+</body>
+
+</html>
